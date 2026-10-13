@@ -10,6 +10,8 @@ yukiskill 是一个用于前端设计开发的 Agent Skill。它将 24 个设计
 
 ## 安装
 
+**v0.2.0 整合版**：统一编排资源发现、离线设计检索、控件规范、安装接入与页面验证。内置经过授权的上游材料与原创适配，固定版本与分工见[整合说明](skills/yukiskill/references/integrations.md)。
+
 通过 [Skills CLI](https://github.com/vercel-labs/skills) 安装：
 
 ```bash
@@ -81,7 +83,7 @@ npx skills find react-bits
 ## 使用条件
 
 - 运行环境需要支持 `SKILL.md`，并具备联网搜索和项目文件编辑能力。安装依赖还需要命令执行和项目包管理器。
-- 这是指导 Agent 工作的技能，不是独立爬虫、后台服务或组件素材包。只安装本次实际选中的依赖。
+- 这是带离线设计检索工具的 Agent 技能；只安装实际选中的组件依赖。离线工具需要 Python 3.10+，其他流程无需 Python。
 - 优先复用已有组件，尊重用户对预览、安装和修改范围的要求。
 - 保留键盘、焦点、移动端、安全区域及减少动态效果设置。
 - 付费资源、上线部署、外部发布分别遵循用户授权。
@@ -89,6 +91,13 @@ npx skills find react-bits
 - 浏览器工具不可用时，明确报告视觉验证尚未完成。
 
 ## 参与维护
+
+内置 Design Resource Library 资源目录、UI UX Pro Max 检索引擎与数据、Impeccable 设计质量指南；通过原创控件指南与 Component Gallery Skill 可选协作。未打包完整上游运行时或 hooks。
+
+```bash
+python skills/yukiskill/scripts/design-search.py "keyboard focus" --domain ux --json
+python skills/yukiskill/scripts/design-search.py "form validation" --stack react --json
+```
 
 欢迎提交资源链接修正、框架适配经验与真实使用案例。参见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
@@ -101,4 +110,4 @@ python scripts/validate.py
 
 仓库结构参考 [anthropics/skills](https://github.com/anthropics/skills)、[vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) 和 [Agent Skills 格式](https://agentskills.io/)。本项目独立维护。
 
-本仓库采用 [MIT](LICENSE) 许可证；外部资源说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+原创内容采用 [MIT](LICENSE)；内置上游文件保留 MIT / Apache-2.0 原许可。见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

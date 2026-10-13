@@ -3,6 +3,8 @@
 from pathlib import Path
 import re
 import sys
+import json
+import hashlib
 from urllib.parse import unquote
 
 import yaml
@@ -41,7 +43,7 @@ def validate(root: Path) -> list[str]:
         errors.append(f'Expected 24 source entries, found {len(entries)}; update counts together')
 
     for file in root.rglob('*.md'):
-        if '.git' in file.parts:
+        if '.git' in file.parts or 'vendor' in file.parts:
             continue
         text = file.read_text(encoding='utf-8')
         if re.search(r'[A-Za-z]:[\\/](?:Users|迅雷下载|yuki)[\\/]', text):
@@ -55,6 +57,12 @@ def validate(root: Path) -> list[str]:
     for required in ('README.md', 'README.zh-CN.md', 'LICENSE', 'CONTRIBUTING.md', 'THIRD_PARTY_NOTICES.md'):
         if not (root / required).is_file():
             errors.append(f'Missing {required}')
+    lock = json.loads((skill / 'upstream-lock.json').read_text(encoding='utf-8'))
+    for project in lock['projects']:
+        for item in project['files']:
+            path = skill / item['path']
+            if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != item['sha256']:
+                errors.append(f'Upstream file missing or changed: {item["path"]}')
     return errors
 
 

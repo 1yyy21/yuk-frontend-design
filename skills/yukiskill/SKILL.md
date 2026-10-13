@@ -5,6 +5,19 @@ description: Frontend design and UI/UX resource discovery skill. Search 24 curat
 
 # yukiskill
 
+## 整合版入口（v0.2.0）
+
+内置 Design Resource Library 的资源参考、UI UX Pro Max 的离线检索脚本和数据、Impeccable 的设计质量指南；Component Gallery Skill 通过原创控件指南和可选调用入口协作。固定版本与许可见 [references/integrations.md](references/integrations.md)。不要一次加载全部上游指令，也不要自动安装其他完整技能。
+
+- 找资源 / `discover`：使用原有 24 站；无合适结果时再读 `vendor/design-resource-library/reference.md` 扩展候选。
+- 新界面 / `design`：读 [references/design.md](references/design.md)，形成视觉方向，再搜索实际组件。
+- 控件实现 / `component`：读 [references/components.md](references/components.md)，定义状态和语义再接入。
+- 美化 / `polish`：读设计指南和 `vendor/impeccable/craft-floor.md`，保留产品事实、行为和指定风格。
+- 验证 / `audit`：读 [references/verification.md](references/verification.md)；仅评审请求不改源码。
+- 普通自然语言任务自动选择相关步骤，无需用户记忆模式名。
+
+离线入口：`python <skill-base>/scripts/design-search.py "query" --domain ux --json`。具体调用见设计指南。结果是建议，不能覆盖用户要求或已有组件；无 Python 时使用在线资源和参考继续，明确未运行离线检索。
+
 把设计资源库变成“需求 → 在线发现 → 筛选 → 安装接入 → 页面验证”的工作流。默认在前端设计开发时主动使用，不需要用户再次说“帮我找组件”。用户请求实现前端功能并允许修改项目时，在其授权范围内安装必要的适用依赖、加入可复用组件源码和素材；仅咨询、评审、要求只预览或明确禁止安装时，遵循该限制。本技能不自行授予执行权限。选定适配的免费资源后继续完成已授权的接入，不停在推荐清单。
 
 ## 自动发现与选择
@@ -34,6 +47,6 @@ description: Frontend design and UI/UX resource discovery skill. Search 24 curat
 
 ## 与现有技能协作
 
-若环境提供 `impeccable`，在需要视觉设计时结合它做设计判断，本技能负责资源发现和实际接入；截图严格还原时遵循相应截图技能，不让候选组件改变参考结构。无需先安装其他技能才能运行本技能。
+若已安装完整 `impeccable`，用其当前设计流程，本技能负责资源发现与接入，不重复读取内置质量指南。Pro Max 提供设计建议，Component Gallery 提供组件规范，Resource Library 扩展候选。用户要求、项目约定与当前范围优先。本技能不偷偷安装完整运行时、hooks 或持久化配置。截图严格还原时遵循对应技能，不让候选组件改变参考结构。
 
 完成后简短告诉用户“用了什么、已接入哪里、效果怎么验证”，附具体来源或项目资源记录链接，不只给一串网址。

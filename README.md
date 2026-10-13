@@ -12,6 +12,8 @@ It connects design discovery to working code: identify the project → search re
 
 ## Install
 
+**v0.2.0 integrated edition:** one entry point combines resource discovery, offline design search, component contracts, and page verification. Selected MIT / Apache-2.0 upstream materials are pinned and attributed. See [integration details](skills/yukiskill/references/integrations.md).
+
 Using the [Skills CLI](https://github.com/vercel-labs/skills):
 
 ```bash
@@ -82,13 +84,18 @@ For GitHub repository search, try `topic:agent-skills frontend`, `topic:frontend
 ## Requirements and boundaries
 
 - An agent that can load `SKILL.md`, access the web, and edit your project. Dependency installation also requires command execution and the project's package manager.
-- This is an instruction-based skill, not a standalone scraper, background service, or bundled component library. It does not install all 24 libraries.
+- This is an agent skill with an offline design search tool, not a background service or UI asset library. It does not install all 24 libraries. Python 3.10+ is required only for offline search.
 - Existing project components take priority when suitable. React examples are not inserted into unrelated frameworks without adaptation.
 - User permissions and project rules apply. Paid downloads, production deployment, and external publication require their own authorization.
 - Third-party components, fonts, and media keep their own licenses. The MIT license covers this repository's original instructions and tooling.
 - Browser validation depends on tools available in the host agent. Missing visual validation must be reported rather than assumed.
 
-The primary skill instructions and catalog are written in Chinese; this README provides an English overview.
+The primary instructions are Chinese; this README provides an English overview. Included: Design Resource Library's reference, UI UX Pro Max's search engine and datasets, Impeccable's craft floor, and original component integration guidance with an optional Component Gallery Skill route. Full upstream runtimes and hooks are not included.
+
+```bash
+python skills/yukiskill/scripts/design-search.py "keyboard focus" --domain ux --json
+python skills/yukiskill/scripts/design-search.py "form validation" --stack react --json
+```
 
 ## Repository structure
 
@@ -116,4 +123,4 @@ Repository organization and installation conventions were informed by [anthropic
 
 ## License
 
-[MIT](LICENSE). See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the distinction between this skill and external resources.
+[MIT](LICENSE) for original yukiskill work; vendored files retain MIT or Apache-2.0. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
