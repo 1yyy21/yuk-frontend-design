@@ -1,10 +1,12 @@
-# yukiskill
+# yukiskill — 前端设计与 UI 组件发现技能
 
 **自动寻找合适的 UI，接入项目，验证效果。**
 
 [English](README.md) · [技能正文](skills/yukiskill/SKILL.md) · [24 个资源网站](skills/yukiskill/references/sources.md) · [MIT 许可证](LICENSE)
 
 yukiskill 是一个用于前端设计开发的 Agent Skill。它将 24 个设计资源网站整合成可执行的工作流：识别项目技术栈，搜索适用的控件、动画、UI、图标和字体，筛选兼容的实现，安装接入，并检查实际页面效果。
+
+适用于**前端设计、UI/UX 美化、UI 组件搜集、控件安装、CSS 动画、React 动效、Tailwind CSS 适配、网页设计灵感、图标与字体选用**。采用 Agent Skills 格式，可通过 Codex、Claude Code、Cursor 等编码 Agent 各自支持的技能安装流程使用。
 
 ## 安装
 
@@ -53,6 +55,28 @@ npx skills add 1yyy21/yukiskill --skill yukiskill --agent codex --global
 | 记录 | 登记来源、版本、授权证据与验证结果 |
 
 资源覆盖 Uiverse、21st.dev、React Bits、Magic UI、Animata、Aceternity UI、Codrops、CodePen、three.js，以及整页灵感、图标、Lottie 与字体网站。完整清单见[资源目录](skills/yukiskill/references/sources.md)。
+
+## 怎么搜索同类 Skill
+
+在 [Skills 目录](https://skills.sh/) 或 Skills CLI 中，英文任务关键词通常更方便定位对应技能：
+
+| 想找什么 | 建议关键词 |
+| --- | --- |
+| 前端设计与界面美化 | `frontend-design`、`ui-ux`、`web-design` |
+| 搜集资源并接入项目 | `design-resources`、`design-resource-library`、`ui-components`、`component-library` |
+| 控件动画与动态组件 | `css-animation`、`react-bits`、`magic-ui`、`aceternity-ui`、`uiverse` |
+| 特定 Agent 技能 | `agent-skills`、`codex-skills`、`claude-code-skills` |
+
+```bash
+npx skills find frontend-design
+npx skills find design-resources
+npx skills find ui-components
+npx skills find react-bits
+```
+
+在 GitHub 搜索仓库时，可用 `topic:agent-skills frontend`、`topic:frontend-design skill` 或 `"design-resource-library"`。中文可搜索“前端设计 skill”“UI 组件 skill”“动效技能”“设计资源 skill”。直接找本项目则搜索 `yukiskill`，或使用上方安装命令。
+
+本项目侧重“资源发现 → 筛选 → 安装接入 → 验证”。视觉设计指导、设计系统规范和 UI 审查也属于邻近品类，但工作内容不完全相同。新仓库进入搜索索引和第三方目录可能需要时间；关键词不保证排名或收录。
 
 ## 使用条件
 

@@ -1,10 +1,12 @@
-# yukiskill
+# yukiskill — Frontend Design & UI Component Discovery
 
 **Find the right UI. Integrate it into your project. Verify the result.**
 
 [中文](README.zh-CN.md) · [Skill instructions](skills/yukiskill/SKILL.md) · [24 sources](skills/yukiskill/references/sources.md) · [MIT](LICENSE)
 
 An agent skill for frontend development that searches a curated library of **24 design resources**, selects components and motion that fit your stack, and integrates the selected implementation into the actual interface.
+
+Use it for **frontend design**, **UI/UX polish**, **UI component discovery**, **CSS animations**, **React components**, **Tailwind CSS integration**, **web design inspiration**, icons, and typography. It is packaged as an **Agent Skill** for coding agents such as Codex; agents such as Claude Code and Cursor can use the same `SKILL.md` format through their supported installation workflows.
 
 It connects design discovery to working code: identify the project → search relevant sources → check compatibility and licensing → install or adapt → verify the page.
 
@@ -56,6 +58,26 @@ Show the preview before changing the production source.
 | Record | Records sources, versions, license evidence, and validation in the project |
 
 **Resources include:** Uiverse, 21st.dev, React Bits, Magic UI, Animata, Aceternity UI, Codrops, CodePen, three.js, Norrly, MotionSites, SVG Repo, LottieFiles, and font resources. The [catalog](skills/yukiskill/references/sources.md) contains all 24 entries and routing guidance.
+
+## Discover this category
+
+In the [Skills directory](https://skills.sh/), start with these task-specific search terms:
+
+| Looking for | Search terms |
+| --- | --- |
+| Interface design and polish | `frontend-design`, `ui-ux`, `web-design` |
+| Resource discovery and integration | `design-resources`, `design-resource-library`, `ui-components`, `component-library` |
+| UI motion and reusable effects | `css-animation`, `react-bits`, `magic-ui`, `aceternity-ui`, `uiverse` |
+| Agent-specific skills | `agent-skills`, `codex-skills`, `claude-code-skills` |
+
+```bash
+npx skills find frontend-design
+npx skills find design-resources
+npx skills find ui-components
+npx skills find react-bits
+```
+
+For GitHub repository search, try `topic:agent-skills frontend`, `topic:frontend-design skill`, or `"design-resource-library"`. To find this project directly, search `yukiskill` or use its installation command above. A new GitHub repository may take time to appear in search and third-party directories; these keywords do not guarantee ranking or directory inclusion.
 
 ## Requirements and boundaries
 

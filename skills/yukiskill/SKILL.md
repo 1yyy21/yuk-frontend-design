@@ -1,6 +1,6 @@
 ---
 name: yukiskill
-description: Discover, select, and integrate frontend UI components, animations, icons, and fonts from 24 curated design resources. Use for frontend development, redesigns, and interface polish; match the project stack, install selected dependencies when authorized, and verify the actual page. 前端设计开发时自动搜索并接入适用 UI 资源。
+description: Frontend design and UI/UX resource discovery skill. Search 24 curated design resources for UI components, CSS animations, React components, Tailwind CSS patterns, icons, and fonts, including React Bits, Magic UI, Aceternity UI, Uiverse, and 21st.dev. Use for frontend development, redesigns, and interface polish; match the project stack, install selected dependencies when authorized, and verify the actual page. 前端设计、UI美化、控件搜集、组件安装与动效资源接入；纯后端工作不触发。
 ---
 
 # yukiskill
