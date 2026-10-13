@@ -1,8 +1,8 @@
-# yukiskill — Frontend Design & UI Component Discovery
+# yuk-frontend-design — Frontend Design & UI Component Discovery
 
 **Find the right UI. Integrate it into your project. Verify the result.**
 
-[中文](README.zh-CN.md) · [Skill instructions](skills/yukiskill/SKILL.md) · [24 sources](skills/yukiskill/references/sources.md) · [MIT](LICENSE)
+[中文](README.zh-CN.md) · [Skill instructions](skills/yuk-frontend-design/SKILL.md) · [24 sources](skills/yuk-frontend-design/references/sources.md) · [MIT](LICENSE)
 
 An agent skill for frontend development that searches a curated library of **24 design resources**, selects components and motion that fit your stack, and integrates the selected implementation into the actual interface.
 
@@ -12,39 +12,39 @@ It connects design discovery to working code: identify the project → search re
 
 ## Install
 
-**v0.2.0 integrated edition:** one entry point combines resource discovery, offline design search, component contracts, and page verification. Selected MIT / Apache-2.0 upstream materials are pinned and attributed. See [integration details](skills/yukiskill/references/integrations.md).
+**v0.2.0 integrated edition:** one entry point combines resource discovery, offline design search, component contracts, and page verification. Selected MIT / Apache-2.0 upstream materials are pinned and attributed. See [integration details](skills/yuk-frontend-design/references/integrations.md).
 
 Using the [Skills CLI](https://github.com/vercel-labs/skills):
 
 ```bash
-npx skills add 1yyy21/yukiskill --skill yukiskill
+npx skills add 1yyy21/yuk-frontend-design --skill yuk-frontend-design
 ```
 
 For a global Codex installation:
 
 ```bash
-npx skills add 1yyy21/yukiskill --skill yukiskill --agent codex --global
+npx skills add 1yyy21/yuk-frontend-design --skill yuk-frontend-design --agent codex --global
 ```
 
-Alternatively, clone this repository and copy `skills/yukiskill` to your agent's skill directory. For Codex, use `$CODEX_HOME/skills`, or `~/.codex/skills` if `CODEX_HOME` is unset. Other agents have their own discovery rules; check their documentation.
+Alternatively, clone this repository and copy `skills/yuk-frontend-design` to your agent's skill directory. For Codex, use `$CODEX_HOME/skills`, or `~/.codex/skills` if `CODEX_HOME` is unset. Other agents have their own discovery rules; check their documentation.
 
 ## Use
 
-In Codex, invoke explicitly with `$yukiskill`, or let the agent select it for relevant frontend tasks when implicit invocation is supported.
+In Codex, invoke explicitly with `$yuk-frontend-design`, or let the agent select it for relevant frontend tasks when implicit invocation is supported.
 
 ```text
-Use $yukiskill to polish this React settings page.
+Use $yuk-frontend-design to polish this React settings page.
 Find suitable switches, cards, and subtle animations,
 integrate them with the existing styles, and verify mobile behavior.
 ```
 
 ```text
-Use $yukiskill to add a CSS loading animation to this plain HTML page.
+Use $yuk-frontend-design to add a CSS loading animation to this plain HTML page.
 Keep the current structure and avoid introducing a framework.
 ```
 
 ```text
-Use $yukiskill to prepare a separate preview of a new dashboard style.
+Use $yuk-frontend-design to prepare a separate preview of a new dashboard style.
 Show the preview before changing the production source.
 ```
 
@@ -59,7 +59,7 @@ Show the preview before changing the production source.
 | Verify | Runs relevant checks and inspects actual interactions and responsive layouts |
 | Record | Records sources, versions, license evidence, and validation in the project |
 
-**Resources include:** Uiverse, 21st.dev, React Bits, Magic UI, Animata, Aceternity UI, Codrops, CodePen, three.js, Norrly, MotionSites, SVG Repo, LottieFiles, and font resources. The [catalog](skills/yukiskill/references/sources.md) contains all 24 entries and routing guidance.
+**Resources include:** Uiverse, 21st.dev, React Bits, Magic UI, Animata, Aceternity UI, Codrops, CodePen, three.js, Norrly, MotionSites, SVG Repo, LottieFiles, and font resources. The [catalog](skills/yuk-frontend-design/references/sources.md) contains all 24 entries and routing guidance.
 
 ## Discover this category
 
@@ -79,7 +79,7 @@ npx skills find ui-components
 npx skills find react-bits
 ```
 
-For GitHub repository search, try `topic:agent-skills frontend`, `topic:frontend-design skill`, or `"design-resource-library"`. To find this project directly, search `yukiskill` or use its installation command above. A new GitHub repository may take time to appear in search and third-party directories; these keywords do not guarantee ranking or directory inclusion.
+For GitHub repository search, try `topic:agent-skills frontend`, `topic:frontend-design skill`, or `"design-resource-library"`. To find this project directly, search `yuk-frontend-design` or use its installation command above. A new GitHub repository may take time to appear in search and third-party directories; these keywords do not guarantee ranking or directory inclusion.
 
 ## Requirements and boundaries
 
@@ -93,14 +93,14 @@ For GitHub repository search, try `topic:agent-skills frontend`, `topic:frontend
 The primary instructions are Chinese; this README provides an English overview. Included: Design Resource Library's reference, UI UX Pro Max's search engine and datasets, Impeccable's craft floor, and original component integration guidance with an optional Component Gallery Skill route. Full upstream runtimes and hooks are not included.
 
 ```bash
-python skills/yukiskill/scripts/design-search.py "keyboard focus" --domain ux --json
-python skills/yukiskill/scripts/design-search.py "form validation" --stack react --json
+python skills/yuk-frontend-design/scripts/design-search.py "keyboard focus" --domain ux --json
+python skills/yuk-frontend-design/scripts/design-search.py "form validation" --stack react --json
 ```
 
 ## Repository structure
 
 ```text
-skills/yukiskill/
+skills/yuk-frontend-design/
   SKILL.md                 Agent instructions
   agents/openai.yaml       Codex UI metadata and implicit invocation policy
   references/sources.md    Curated resource catalog
@@ -123,4 +123,4 @@ Repository organization and installation conventions were informed by [anthropic
 
 ## License
 
-[MIT](LICENSE) for original yukiskill work; vendored files retain MIT or Apache-2.0. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+[MIT](LICENSE) for original yuk-frontend-design work; vendored files retain MIT or Apache-2.0. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

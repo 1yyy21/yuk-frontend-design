@@ -4,11 +4,11 @@ This repository contains original skill instructions, documentation, and tooling
 
 | Bundled material | Upstream | License |
 | --- | --- | --- |
-| Resource reference | Xiaoyang-Hu-96/design-resource-library | [MIT](skills/yukiskill/vendor/design-resource-library/LICENSE) |
-| Search scripts and design data | nextlevelbuilder/ui-ux-pro-max-skill | [MIT](skills/yukiskill/vendor/ui-ux-pro-max/LICENSE) |
-| Craft floor | pbakaus/impeccable | [Apache-2.0](skills/yukiskill/vendor/impeccable/LICENSE), [NOTICE](skills/yukiskill/vendor/impeccable/NOTICE.md) |
+| Resource reference | Xiaoyang-Hu-96/design-resource-library | [MIT](skills/yuk-frontend-design/vendor/design-resource-library/LICENSE) |
+| Search scripts and design data | nextlevelbuilder/ui-ux-pro-max-skill | [MIT](skills/yuk-frontend-design/vendor/ui-ux-pro-max/LICENSE) |
+| Craft floor | pbakaus/impeccable | [Apache-2.0](skills/yuk-frontend-design/vendor/impeccable/LICENSE), [NOTICE](skills/yuk-frontend-design/vendor/impeccable/NOTICE.md) |
 
-Files are unmodified and relocated. [upstream-lock.json](skills/yukiskill/upstream-lock.json) records commits, original paths and hashes. Original copyrights and license terms are retained; root MIT applies to original yukiskill material and does not replace Apache-2.0.
+Files are unmodified and relocated. [upstream-lock.json](skills/yuk-frontend-design/upstream-lock.json) records commits, original paths and hashes. Original copyrights and license terms are retained; root MIT applies to original yuk-frontend-design material and does not replace Apache-2.0.
 
 Component Gallery Skill is an optional collaborator, with no content bundled. Its pinned README stated MIT but a LICENSE file was absent.
 

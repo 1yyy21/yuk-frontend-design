@@ -12,10 +12,10 @@ import yaml
 
 def validate(root: Path) -> list[str]:
     errors: list[str] = []
-    skill = root / 'skills' / 'yukiskill'
+    skill = root / 'skills' / 'yuk-frontend-design'
     entry = skill / 'SKILL.md'
     if not entry.is_file():
-        return ['Missing skills/yukiskill/SKILL.md']
+        return ['Missing skills/yuk-frontend-design/SKILL.md']
     content = entry.read_text(encoding='utf-8')
     match = re.match(r'\A---\r?\n(.*?)\r?\n---(?:\r?\n|$)', content, re.S)
     if not match:
@@ -25,8 +25,8 @@ def validate(root: Path) -> list[str]:
         if not isinstance(metadata, dict):
             errors.append('Frontmatter must be a mapping')
         else:
-            if metadata.get('name') != 'yukiskill':
-                errors.append('Skill name must be yukiskill')
+            if metadata.get('name') != 'yuk-frontend-design':
+                errors.append('Skill name must be yuk-frontend-design')
             description = metadata.get('description')
             if not isinstance(description, str) or not description.strip() or len(description) > 1024:
                 errors.append('Description must be nonempty and at most 1024 characters')
@@ -34,8 +34,8 @@ def validate(root: Path) -> list[str]:
     config = yaml.safe_load((skill / 'agents' / 'openai.yaml').read_text(encoding='utf-8'))
     if config.get('policy', {}).get('allow_implicit_invocation') is not True:
         errors.append('Implicit invocation must remain enabled')
-    if '$yukiskill' not in config.get('interface', {}).get('default_prompt', ''):
-        errors.append('Default prompt must reference $yukiskill')
+    if '$yuk-frontend-design' not in config.get('interface', {}).get('default_prompt', ''):
+        errors.append('Default prompt must reference $yuk-frontend-design')
 
     catalog = (skill / 'references' / 'sources.md').read_text(encoding='utf-8')
     entries = re.findall(r'^\| \[', catalog, re.M)

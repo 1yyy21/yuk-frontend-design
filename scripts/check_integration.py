@@ -6,7 +6,7 @@ import sys
 import tempfile
 
 root = Path(__file__).resolve().parents[1]
-entry = root / 'skills/yukiskill/scripts/design-search.py'
+entry = root / 'skills/yuk-frontend-design/scripts/design-search.py'
 
 
 def run(*arguments):
@@ -20,7 +20,7 @@ ux = json.loads(run('keyboard focus modal', '--domain', 'ux', '--json'))
 assert ux['count'] > 0 and ux['domain'] == 'ux', 'UX retrieval returned no relevant records'
 stack = json.loads(run('form validation', '--stack', 'react', '--json'))
 assert stack['count'] > 0 and stack['stack'] == 'react', 'React guidance missing'
-with tempfile.TemporaryDirectory(prefix='yukiskill-check-') as temporary:
+with tempfile.TemporaryDirectory(prefix='yuk-frontend-design-check-') as temporary:
     run('productivity dashboard', '--design-system', '-p', 'IntegrationCheck', '--persist', '--output-dir', temporary)
     masters = list(Path(temporary).rglob('MASTER.md'))
     assert len(masters) == 1, 'Expected one persisted design system'

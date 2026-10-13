@@ -1,9 +1,9 @@
 ---
-name: yukiskill
+name: yuk-frontend-design
 description: Frontend design and UI/UX resource discovery skill. Search 24 curated design resources for UI components, CSS animations, React components, Tailwind CSS patterns, icons, and fonts, including React Bits, Magic UI, Aceternity UI, Uiverse, and 21st.dev. Use for frontend development, redesigns, and interface polish; match the project stack, install selected dependencies when authorized, and verify the actual page. 前端设计、UI美化、控件搜集、组件安装与动效资源接入；纯后端工作不触发。
 ---
 
-# yukiskill
+# yuk-frontend-design
 
 ## 整合版入口（v0.2.0）
 
@@ -40,7 +40,7 @@ description: Frontend design and UI/UX resource discovery skill. Search 24 curat
 
 ## 来源记录与验证
 
-- 若项目没有既定来源登记，创建或更新 `docs/yukiskill-resources.md`，只记录实际接入的资源：名称、具体页面/仓库 URL、用途、包及版本或源码路径、授权证据、改造点和验证结果。不收集密钥、不改用户的跨会话记忆。
+- 若项目没有既定来源登记，创建或更新 `docs/yuk-frontend-design-resources.md`，只记录实际接入的资源：名称、具体页面/仓库 URL、用途、包及版本或源码路径、授权证据、改造点和验证结果。不收集密钥、不改用户的跨会话记忆。
 - 完成相关构建、类型或现有检查；启动/使用本地预览检查实际页面、桌面/移动布局、控件交互、焦点和动画。纯样式局部改动以页面验证为主，不编写镜像实现的测试。
 - 安装成功不等于接入完成，编译通过不等于视觉合格。报告实际安装/接入的内容、来源和已完成验证；浏览器不可用时明确视觉验证缺口。
 - 前端接入的授权不扩展到上线部署、APK 打包、付费购买或其他外部发布。用户要求先预览时，先在独立预览中接入并展示，待其指定后再落到正式源码。

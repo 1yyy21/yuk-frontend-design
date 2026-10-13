@@ -1,6 +1,6 @@
 # 控件契约与接入
 
-本指南为 yukiskill 原创，与 Component Gallery Skill 的组件参考方向协作，不包含该项目的源码或参考文件。
+本指南为 yuk-frontend-design 原创，与 Component Gallery Skill 的组件参考方向协作，不包含该项目的源码或参考文件。
 
 先定义控件语义、状态、输入/事件、键盘行为和响应式约束，再搜索实现。优先已有组件系统，React/Vue/Svelte/HTML 各用本栈方案；CSS/Tailwind 不因示例而强制切换。间距沿用已有尺度，布局优先 gap，弹层沿用既有层级。
 
@@ -15,7 +15,7 @@
 
 必要时查 [Component Gallery](https://component.gallery/) 的名称及设计系统参考，再核实选定组件的官方文档。目录链接不代表对应源码允许复制。
 
-已安装 `component-gallery-skill` 时可读取相关规范，之后继续 yukiskill 接入与验证。用户要求安装完整项目时：
+已安装 `component-gallery-skill` 时可读取相关规范，之后继续 yuk-frontend-design 接入与验证。用户要求安装完整项目时：
 
 ```bash
 npx skills add nicolas-deyros/component-gallery-skill
