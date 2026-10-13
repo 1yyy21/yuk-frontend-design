@@ -1,0 +1,6 @@
+interface:
+  display_name: "yukiskill"
+  short_description: "前端设计开发时自动搜索适用的控件、动画与 UI，安装接入并验证页面效果"
+  default_prompt: "使用 $yukiskill 为当前前端任务寻找合适的控件、动画和 UI，按项目技术栈自动安装接入并验证。"
+policy:
+  allow_implicit_invocation: true
